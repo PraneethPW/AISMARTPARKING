@@ -4,7 +4,7 @@ function apiBaseUrl(): string {
   const env = import.meta.env.VITE_API_URL as string | undefined;
   if (env && env.trim()) return env.trim();
   if (import.meta.env.DEV) return "";
-  return "http://localhost:8000";
+  return "https://aismartparking-production.up.railway.app";
 }
 
 const api = axios.create({ baseURL: apiBaseUrl() });
